@@ -1,0 +1,17 @@
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/model/Budget.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/controller/ContractorController.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/repository/ContractorRepository.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/model/Project.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/service/ContractorService.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/controller/ProjectController.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/controller/BudgetControllerRefactored.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/repository/ProjectRepository.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/controller/BudgetController_old_backup.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/DemoApplication.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/controller/GenericController.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/controller/ContractorControllerRefactored.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/model/Contractor.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/controller/ProjectControllerRefactored.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/service/ProjectService.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/repository/BudgetRepository.java
+/home/pose1d0n/Desktop/micovski/Home-Renovation-Tracker/demo/src/main/java/com/example/renovationtracker/service/BudgetService.java

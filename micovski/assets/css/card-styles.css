@@ -1,0 +1,42 @@
+root {
+    --card-background: white; /* Background color for cards */
+    --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    --card-hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+    --card-padding: 20px; /* Padding inside cards */
+}
+
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Clear borders */
+    padding: 12px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: #f2f2f2; /* Different background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row color */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Hover effect */
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: var(--card-padding);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--card-hover-shadow);
+}

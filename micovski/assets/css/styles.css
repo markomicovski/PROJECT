@@ -1,0 +1,352 @@
+:root {
+    --primary-color: #0056b3; /* Updated Primary color */
+    --secondary-color: #495057; /* Updated Secondary color */
+    --accent-color: #ff5722; /* Accent color */
+    --font-family: 'Roboto', sans-serif; /* Font family */
+    --background-color: #ffffff; /* Light mode background */
+    --text-color: #000000; /* Light mode text */
+    --card-background: white; /* Background color for cards */
+    --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for cards */
+    --card-hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Subtle shadow on hover */
+    --card-padding: 20px; /* Padding inside cards */
+}
+
+[data-theme='dark'] {
+    --background-color: #121212; /* Dark mode background */
+    --text-color: #ffffff; /* Dark mode text */
+    --accent-color: #bb86fc; /* Dark mode accent */
+}
+
+/* Basic styles for the navigation bar */
+nav {
+    background-color: var(--primary-color);
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for modern appearance */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Space between nav items */
+}
+
+nav li {
+    margin-right: 30px; /* Increased spacing between nav items */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+nav a.active {
+    background-color: var(--accent-color); /* Highlight active link */
+    color: white; /* Ensure text is visible */
+}
+
+/* Improved button styles */
+#quick-actions button {
+    padding: 15px 25px; /* Maintain increased padding */
+    font-size: 1.1em; /* Maintain increased font size */
+    background-color: var(--accent-color); /* Use accent color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+#quick-actions button:hover {
+    background-color: #ff8a00; /* Lighter shade on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Improved navigation bar styles */
+nav {
+    background-color: var(--primary-color);
+    padding: 15px; /* Increased padding */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Improved toggle switch styles */
+.theme-toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-toggle-label input {
+    margin-right: 10px; /* Space between checkbox and label */
+}
+
+/* Ensure dashboard visibility */
+#dashboard {
+    display: block; /* Ensure the dashboard section is visible */
+    padding: 20px; /* Add padding for spacing */
+}
+
+/* Improve label spacing */
+label {
+    margin-bottom: 10px; /* Add margin below labels */
+    display: block; /* Ensure labels are block elements */
+}
+
+/* Enhance navigation contrast */
+nav a {
+    color: #ffffff; /* Ensure text is white for better contrast */
+}
+
+/* Adjust section padding */
+section {
+    padding: 20px; /* Increased padding for sections */
+}
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    font-size: 2.5em; /* Increase size for h1 */
+    font-weight: bold; /* Make h1 bold */
+    color: var(--primary-color); /* Use primary color */
+}
+
+h2 {
+    font-size: 2em; /* Increase size for h2 */
+    font-weight: bold; /* Make h2 bold */
+    color: var(--secondary-color); /* Use secondary color */
+}
+
+h3 {
+    font-size: 1.5em; /* Increase size for h3 */
+    font-weight: normal; /* Normal weight for h3 */
+    color: #333; /* Keep h3 color */
+}
+
+/* Update button styles */
+#quick-actions button {
+    margin-right: 10px; /* Space between buttons */
+    padding: 12px 20px; /* Increased button padding */
+    background-color: var(--secondary-color); /* Use secondary color */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    width: 100%; /* Full width for quick action buttons */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Smooth transition */
+}
+
+#quick-actions button:hover {
+    background-color: var(--accent-color); /* Use accent color on hover */
+}
+
+/* Styles for the Data Table */
+table {
+    width: 100%; /* Full width */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Clear borders */
+    padding: 12px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: #f2f2f2; /* Different background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row color */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Hover effect */
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: var(--card-padding);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--card-hover-shadow);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin-bottom: 10px;
+    }
+    .content {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin-bottom: 10px;
+    }
+    .content {
+        padding: 15px; /* Adjust padding for medium screens */
+    }
+}
+
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: var(--primary-color);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.sidebar.active {
+    display: block;
+    transform: translateX(0);
+}
+
+/* Styles for the Quick Actions Panel */
+#quick-actions {
+    background-color: #e9ecef; /* Light background for the panel */
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#quick-actions button {
+    margin-right: 10px; /* Space between buttons */
+    padding: 10px 15px; /* Button padding */
+    background-color: var(--secondary-color); /* Use secondary color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Full width for quick action buttons */
+}
+
+#quick-actions button:hover {
+    background-color: var(--accent-color); /* Use accent color on hover */
+}
+
+/* Styles for Toast Messages */
+.toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.5s;
+}
+
+.toast.success {
+    background-color: var(--secondary-color);
+}
+
+.toast.error {
+    background-color: red;
+}
+
+/* Responsive Charts */
+canvas {
+    width: 100% !important; /* Ensure charts are responsive */
+    height: auto !important; /* Maintain aspect ratio */
+}
+
+/* Light and Dark Mode Styles */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Loading Spinner Styles */
+.loader {
+    border: 8px solid var(--secondary-color); /* Light border */
+    border-top: 8px solid var(--primary-color); /* Darker border for the top */
+    border-radius: 50%; /* Circular shape */
+    width: 50px; /* Width of the spinner */
+    height: 50px; /* Height of the spinner */
+    animation: spin 1s linear infinite; /* Spin animation */
+    margin: auto; /* Center the loader */
+    display: block; /* Block display for centering */
+}
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Translucent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+.modal {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Max width for the modal */
+    width: 100%; /* Full width for smaller screens */
+    position: relative; /* For positioning the close button */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: var(--accent-color); /* Change color on hover */
+}
