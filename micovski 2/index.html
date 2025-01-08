@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Renovation Tracker</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <script src="assets/js/common.js" defer></script> <!-- Include common.js -->
+</head>
+<body>
+    <header>
+        <h1>Home Renovation Tracker</h1>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle-switch" />
+            <span class="slider"></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="pages/living-room.html">Living Room</a></li>
+                <li><a href="pages/kitchen.html">Kitchen</a></li>
+                <li><a href="pages/bedroom.html">Bedroom</a></li>
+                <li><a href="pages/toilet.html">Toilet</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard">
+            <h2>Projects</h2>
+
+            <!-- Living Room Project -->
+            <a href="pages/living-room.html" class="project-link">
+                <div class="project" data-type="living-room">
+                    <h3>Living Room</h3>
+                    <div class="progress-bar" id="living-room-progress-bar" data-progress="0"></div>
+                    <p id="living-room-progress-text">0% Complete</p>
+                </div>
+            </a>
+
+            <!-- Kitchen Project -->
+            <a href="pages/kitchen.html" class="project-link">
+                <div class="project" data-type="kitchen">
+                    <h3>Kitchen</h3>
+                    <div class="progress-bar" id="kitchen-progress-bar" data-progress="0"></div>
+                    <p id="kitchen-progress-text">0% Complete</p>
+                </div>
+            </a>
+
+            <!-- Bedroom Project -->
+            <a href="pages/bedroom.html" class="project-link">
+                <div class="project" data-type="bedroom">
+                    <h3>Bedroom</h3>
+                    <div class="progress-bar" id="bedroom-progress-bar" data-progress="0"></div>
+                    <p id="bedroom-progress-text">0% Complete</p>
+                </div>
+            </a>
+
+            <!-- Toilet Project -->
+            <a href="pages/toilet.html" class="project-link">
+                <div class="project" data-type="toilet">
+                    <h3>Toilet</h3>
+                    <div class="progress-bar" id="toilet-progress-bar" data-progress="0"></div>
+                    <p id="toilet-progress-text">0% Complete</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <script>
+        const updateDashboardProgress = () => {
+            const projects = [
+                { id: 'living-room', name: 'Living Room' },
+                { id: 'kitchen', name: 'Kitchen' },
+                { id: 'bedroom', name: 'Bedroom' },
+                { id: 'toilet', name: 'Toilet' }
+            ];
+
+            projects.forEach(project => {
+                const progressBar = document.getElementById(`${project.id}-progress-bar`);
+                const progressText = document.getElementById(`${project.id}-progress-text`);
+                const progress = localStorage.getItem(`${project.id}-progress`) || 0;
+
+                if (progressBar && progressText) {
+                    progressBar.style.width = `${progress}%`;
+                    progressText.textContent = `${progress}% Complete`;
+                }
+            });
+        };
+
+        // Initialize the theme and dashboard progress
+        document.addEventListener('DOMContentLoaded', () => {
+            updateDashboardProgress();
+
+            // Sync the theme toggle switch with the stored theme
+            const themeToggleSwitch = document.getElementById('theme-toggle-switch');
+            if (themeToggleSwitch) {
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                themeToggleSwitch.checked = savedTheme === 'dark';
+                themeToggleSwitch.dispatchEvent(new Event('change'));
+            }
+        });
+
+        // Update dashboard progress bars when storage changes
+        window.addEventListener('storage', updateDashboardProgress);
+    </script>
+</body>
+</html>

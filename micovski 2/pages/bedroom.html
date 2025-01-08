@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedroom Renovation</title>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/bedroom.css">
+    <script src="../assets/js/common.js" defer></script>
+    <script src="../assets/js/bedroom.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bedroom Renovation</h1>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle-switch" />
+            <span class="slider"></span>
+        </label>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Dashboard</a></li>
+                <li><a href="living-room.html">Living Room</a></li>
+                <li><a href="kitchen.html">Kitchen</a></li>
+                <li><a href="toilet.html">Toilet</a></li>
+                <li><a href="bedroom.html" id="bedroom-link">Bedroom</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="details">
+            <h2>Tasks</h2>
+            <ul id="task-list">
+                <!-- Tasks will be dynamically populated -->
+            </ul>
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="Add a new task" required />
+                <button type="submit" class="add-task-btn">Add Task</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        // Add 'active' class dynamically for navigation
+        document.getElementById('bedroom-link').classList.add('active');
+    </script>
+</body>
+</html>

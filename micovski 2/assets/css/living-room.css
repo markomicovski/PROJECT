@@ -1,0 +1,161 @@
+/* Living Room Styles */
+.project[data-type="living-room"] {
+    background-color: #fde4ec; /* Light pink background */
+    color: #c2185b; /* Deep pink text */
+    border-radius: 12px; /* Rounded corners for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 1.5rem;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+    position: relative;
+}
+
+.project[data-type="living-room"]:hover {
+    background-color: #f8bbd0; /* Slightly darker pink on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Title and Text Styling */
+.project[data-type="living-room"] h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project[data-type="living-room"] p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Progress Bar */
+.project[data-type="living-room"] .progress-bar {
+    background-color: #f8bbd0; /* Soft pink for unfilled progress */
+    border-radius: 8px;
+    height: 12px;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.project[data-type="living-room"] .progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: var(--progress-width, 0%); /* Dynamic progress width */
+    background-color: #c2185b; /* Deep pink for filled progress */
+    border-radius: 8px;
+    transition: width 0.5s ease-in-out, background-color 0.3s ease;
+}
+
+/* Task List */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+#task-list li {
+    background-color: #fde4ec; /* Light pink background */
+    color: #c2185b; /* Deep pink text */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#task-list li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+#task-list li button {
+    background-color: #c2185b; /* Deep pink button */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#task-list li button:hover {
+    background-color: #a31545; /* Darker pink on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Task Input */
+#task-form {
+    display: flex;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+
+#task-input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px solid #c2185b;
+    border-radius: 5px;
+}
+
+.add-task-btn {
+    background-color: #c2185b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-task-btn:hover {
+    background-color: #a31545; /* Darker pink on hover */
+    transform: scale(1.05);
+}
+
+/* Dark Mode Styles */
+body.dark-mode .project[data-type="living-room"] {
+    background-color: #3e2c31; /* Dark muted pink background */
+    color: #f06292; /* Bright pink text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow for dark mode */
+}
+
+body.dark-mode .project[data-type="living-room"]:hover {
+    background-color: #4a2f37; /* Slightly lighter muted pink on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    transform: translateY(-5px);
+}
+
+body.dark-mode .project[data-type="living-room"] .progress-bar {
+    background-color: #4a2f37; /* Darker pink for unfilled progress */
+}
+
+body.dark-mode .project[data-type="living-room"] .progress-bar::after {
+    background-color: #f06292; /* Bright pink for filled progress */
+}
+
+body.dark-mode #task-list li {
+    background-color: #4a2f37; /* Darker pink for tasks */
+    color: #f06292; /* Bright pink text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode #task-list li button {
+    background-color: #f06292; /* Bright pink button */
+    color: #3e2c31; /* Dark text for contrast */
+}
+
+body.dark-mode #task-list li button:hover {
+    background-color: #e91e63; /* Deeper pink hover in dark mode */
+}
+
+body.dark-mode .add-task-btn {
+    background-color: #f06292; /* Bright pink button */
+    color: #3e2c31; /* Dark text for contrast */
+}
+
+body.dark-mode .add-task-btn:hover {
+    background-color: #e91e63; /* Deeper pink hover in dark mode */
+}
